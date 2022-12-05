@@ -1,0 +1,46 @@
+                                                   Command to create a backup
+
+gitlab-rake gitlab:backup:create
+
+
+
+                                                   Backup will be store in 
+
+path : cd /var/opt/gitlab/backups/
+
+
+Path of files /etc/gitlab 
+Copy gitlab.rb file and gitlab-secrets.json
+Send it to destination server on the same Path and change the owner of backup main file to git:git which is stord in /var/opt/gitlab/backups 
+
+                                 Restoring backup will be done in destination server
+
+Change the external url in /etc/gitlab/gitlab.rb
+
+external_url 'destinatio_server'
+
+After this paste this command
+gitlab-ctl reconfigure
+gitlab-ctl restart
+gitlab-rake cache:clear
+
+                                 Services should be stopped before processing restore in destination server.
+
+gitlab-ctl stop unicorn
+gitlab-ctl stop sidekiq
+gitlab-ctl status
+
+
+
+                                                      Restore command:
+
+gitlab-rake gitlab:backup:restore BACKUP=<id> (id will be before _gitlab_backup.tar)
+
+                                                      Now start gitlab service
+
+gitlab-ctl start
+gitlab-rake gitlab:check SANITIZE=true
+
+                                                     To Change to desired version.
+
+sudo yum install gitlab-ce-15.5.3      (It will change to 15.5.3) 
