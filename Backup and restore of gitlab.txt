@@ -44,3 +44,5 @@ gitlab-rake gitlab:check SANITIZE=true
                                                      To Change to desired version.
 
 sudo yum install gitlab-ce-15.5.3      (It will change to 15.5.3) 
+
+Take a backup of /etc/gitlab/gitlab-secrets.json in the destination machine.
