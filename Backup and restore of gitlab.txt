@@ -47,5 +47,5 @@ sudo yum install gitlab-ce-15.5.3      (It will change to 15.5.3)
 
 Take a backup of /etc/gitlab/gitlab-secrets.json in the destination machine.
 Copy the /etc/gitlab/gitlab-secrets.json from source machine to destination machine
-Take the value of “gitlab_shell” - “secret_token” from the destination machine’s backup of gitlab-secrets.json file, and replace in the Value in /etc/gitlab/gitlab-secrets.json (Which was copied in destination from the source machine).
+Take the value of “gitlab_shell” - “secret_token” from the destination machine’s backup of gitlab-secrets.json file, and replace in the Value in /etc/gitlab/gitlab-secrets.json (Which was copied in Destination from the source machine).
 Run gitlab-ctl reconfigure
