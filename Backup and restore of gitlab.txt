@@ -17,7 +17,7 @@ Send it to destination server on the same Path and change the owner of backup ma
 
 Change the external url in /etc/gitlab/gitlab.rb
 
-external_url 'destinatio_server'
+external_url 'destination_server'
 
 After this paste this command
 gitlab-ctl reconfigure
