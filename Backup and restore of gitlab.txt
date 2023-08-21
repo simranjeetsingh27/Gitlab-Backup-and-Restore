@@ -41,7 +41,7 @@ gitlab-rake gitlab:backup:restore BACKUP=<id> (id will be before _gitlab_backup.
 gitlab-ctl start
 gitlab-rake gitlab:check SANITIZE=true
 
-                                                     To Change to desired version.
+                                                     To Change to desired version
 
 sudo yum install gitlab-ce-15.5.3      (It will change to 15.5.3) 
 
