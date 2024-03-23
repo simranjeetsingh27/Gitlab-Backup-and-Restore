@@ -13,7 +13,7 @@ Path of files /etc/gitlab
 Copy gitlab.rb file and gitlab-secrets.json
 Send it to destination server on the same Path and change the owner of backup main file to git:git which is stord in /var/opt/gitlab/backups 
 
-                                 Restoring backup will be done in destination server
+                                 Restoring backup will be done in destintion server
 
 Change the external url in /etc/gitlab/gitlab.rb
 
